@@ -28,7 +28,7 @@ Sistem ini terdiri dari beberapa modul utama yang saling terhubung:
 2. **Clone Repositori:**
    Buka terminal/Command Prompt, arahkan ke folder `htdocs` (jika menggunakan XAMPP), lalu jalankan:
    ```bash
-   git clone https://github.com/username-anda/JT_Purchase.git
+   git clone https://github.com/ytbsamsu007/pms.git
    ```
 
 3. **Konfigurasi Database:**
@@ -46,7 +46,7 @@ Sistem ini terdiri dari beberapa modul utama yang saling terhubung:
 4. **Jalankan Aplikasi:**
    Buka *browser* dan akses URL: 
    ```
-   http://localhost/JT_Purchase
+   http://localhost/pms
    ```
 
 ## 🔒 Fitur Keamanan Tambahan

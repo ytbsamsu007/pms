@@ -1,0 +1,480 @@
+/**
+ * Stylesheet Resmi Dokumen Cetak / Print Report - PT Jaya Teknis
+ * Path: styles/print_document.css
+ */
+
+@page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+}
+
+body.print-mode {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    background-color: #f0f2f5;
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.print-wrapper {
+    max-width: 860px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 28px 36px 30px 36px;
+    box-shadow: 0 4px 22px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.print-wrapper.no-kop {
+    padding-top: 15px;
+}
+
+/* =========================================================
+   HEADER KOP SURAT
+   ========================================================= */
+.kop-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.kop-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.company-title {
+    font-size: 19px;
+    font-weight: 900;
+    color: #000000;
+    letter-spacing: 0.3px;
+    line-height: 1.15;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.company-addr {
+    font-size: 11px;
+    color: #333333;
+    line-height: 1.3;
+}
+
+.company-contacts {
+    font-size: 10.5px;
+    color: #111111;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.company-contacts i {
+    font-size: 10px;
+    margin-right: 3px;
+}
+
+.tagline-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 15px;
+}
+
+.tagline-divider {
+    width: 1.5px;
+    height: 52px;
+    background-color: #000000;
+}
+
+.tagline-text {
+    font-size: 11.5px;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.15;
+    color: #111111;
+    letter-spacing: 0.2px;
+    text-align: left;
+}
+
+.header-divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: #222222;
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+   SECTION JUDUL & KOTAK DOKUMEN
+   ========================================================= */
+.title-box-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.title-area {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.doc-title-main {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    color: #000000;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.doc-title-sub {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    width: 85%;
+}
+
+.doc-title-sub .line-side {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #333333;
+}
+
+.doc-title-sub .sub-text {
+    padding: 0 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #111111;
+}
+
+/* Kotak No Dokumen & Tanggal */
+.doc-meta-box {
+    width: 180px;
+    border: 1.5px solid #000000;
+    text-align: center;
+    background-color: #ffffff;
+    flex-shrink: 0;
+}
+
+.doc-meta-box .box-row-lbl {
+    font-size: 10.5px;
+    color: #333333;
+    padding: 3px 4px;
+    background-color: #ffffff;
+}
+
+.doc-meta-box .box-row-val {
+    font-size: 12.5px;
+    font-weight: 800;
+    padding: 2px 4px 4px 4px;
+    color: #000000;
+}
+
+.doc-meta-box .box-divider {
+    border-top: 1px solid #000000;
+}
+
+/* =========================================================
+   METADATA 2 KOLOM
+   ========================================================= */
+.info-grid {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.info-col-left {
+    width: 50%;
+    padding-right: 15px;
+}
+
+.info-col-right {
+    width: 50%;
+    padding-left: 15px;
+    border-left: 1px solid #d0d0d0;
+}
+
+.table-meta-details {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-meta-details td {
+    padding: 3px 0;
+    font-size: 11.5px;
+    vertical-align: top;
+}
+
+.table-meta-details td.lbl {
+    width: 140px;
+    font-weight: 600;
+    color: #111111;
+    white-space: nowrap;
+}
+
+.table-meta-details td.colon {
+    width: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.table-meta-details td.val {
+    color: #000000;
+}
+
+/* =========================================================
+   TABEL BARANG UTAMA
+   ========================================================= */
+.table-items-main {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.table-items-main th {
+    background-color: #d9d9d9 !important;
+    border: 1px solid #555555;
+    padding: 6px 4px;
+    font-weight: 800;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 11px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.table-items-main td {
+    border: 1px solid #555555;
+    padding: 5px 6px;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.table-items-main .total-row td {
+    background-color: #e5e7eb !important;
+    font-weight: 800;
+    border: 1px solid #555555;
+    padding: 6px 6px;
+}
+
+/* =========================================================
+   SECTION RINGKASAN BIAYA & CATATAN
+   ========================================================= */
+.summary-notes-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.notes-column {
+    flex: 1;
+}
+
+.notes-card {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    font-size: 10.5px;
+    line-height: 1.45;
+}
+
+.notes-title {
+    font-weight: 800;
+    font-size: 11px;
+    margin-bottom: 4px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.notes-list {
+    margin: 0;
+    padding-left: 16px;
+    color: #111111;
+}
+
+.notes-list li {
+    margin-bottom: 2px;
+}
+
+/* Kotak Catatan Sederhana */
+.catatan-penerimaan-section {
+    margin-top: -6px;
+    margin-bottom: 20px;
+}
+
+.catatan-box {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    min-height: 48px;
+    padding: 6px 10px;
+    font-size: 11px;
+    color: #111111;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Box Ringkasan Finansial */
+.summary-column {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.summary-box {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.summary-table td {
+    padding: 5px 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.summary-table tr:last-child td {
+    border-bottom: none;
+}
+
+.summary-table .lbl {
+    color: #333333;
+    font-weight: 500;
+}
+
+.summary-table .val {
+    text-align: right;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-weight: 600;
+    color: #000000;
+}
+
+.summary-table .grand-total-row {
+    background-color: #f0f7ff !important;
+    border-top: 1.5px solid #000000;
+}
+
+.summary-table .grand-total-row td {
+    padding: 8px 10px;
+    font-size: 12.5px;
+    font-weight: 800;
+}
+
+.summary-table .grand-total-row .lbl {
+    color: #000000;
+    font-weight: 800;
+}
+
+.summary-table .grand-total-row .val {
+    color: #0d6efd;
+    font-size: 13.5px;
+    font-weight: 800;
+}
+
+/* =========================================================
+   TANDA TANGAN (3 KOLOM)
+   ========================================================= */
+.sig-section {
+    margin-top: 15px;
+    margin-bottom: 24px;
+    page-break-inside: avoid;
+}
+
+.sig-col {
+    text-align: center;
+}
+
+.sig-header-main {
+    font-size: 12px;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 2px;
+}
+
+.sig-header-sub {
+    font-size: 11px;
+    color: #333333;
+    margin-bottom: 55px;
+}
+
+.sig-line-box {
+    display: inline-block;
+    min-width: 165px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 3px;
+}
+
+.sig-person-name {
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.sig-footer-note {
+    font-size: 10px;
+    color: #444444;
+    margin-top: 4px;
+}
+
+/* =========================================================
+   FOOTER BAWAH DOKUMEN
+   ========================================================= */
+.footer-line-container {
+    border-top: 1px solid #000000;
+    padding-top: 6px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 10px;
+    color: #444444;
+}
+
+.footer-right {
+    text-align: right;
+    line-height: 1.35;
+}
+
+/* =========================================================
+   PRINT MEDIA RULES
+   ========================================================= */
+@media print {
+    body.print-mode {
+        background: #ffffff !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .print-wrapper {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+    }
+    .table-items-main th {
+        background-color: #d9d9d9 !important;
+    }
+    .table-items-main .total-row td {
+        background-color: #e5e7eb !important;
+    }
+    .summary-table .grand-total-row {
+        background-color: #f0f7ff !important;
+    }
+}

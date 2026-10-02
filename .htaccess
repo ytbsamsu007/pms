@@ -1,0 +1,8 @@
+# Mencegah Directory Browsing / Directory Listing secara global
+Options -Indexes
+
+# Lindungi file konfigurasi dan sensitif
+<FilesMatch "^\.(htaccess|htpasswd|git|env|ini|log)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

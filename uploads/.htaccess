@@ -1,0 +1,8 @@
+# Mencegah Directory Browsing / Directory Listing pada folder uploads
+Options -Indexes
+
+# Mencegah eksekusi script berbahaya (PHP, CGI, ASP, dll.) di dalam folder upload
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phps|cgi|pl|exe|sh|bat)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

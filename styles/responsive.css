@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/**
+ * Jaya Teknis - Purchasing Management System
+ * Responsive Layout & Media Queries
+ */
+
+/* Responsive Offcanvas Sidebar for Mobile */
+@media (max-width: 991.98px) {
+  .app-sidebar,
+  .sidebar-wrapper {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    bottom: 0;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+  }
+
+  .app-sidebar.show,
+  .sidebar-wrapper.show {
+    left: 0;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 1030;
+  }
+
+  .sidebar-backdrop.show {
+    display: block;
+  }
+
+  #main-content {
+    margin-left: 0 !important;
+  }
+
+  .content-body {
+    padding: 1rem;
+  }
+
+  .app-topbar {
+    padding: 0 1rem;
+  }
+
+  .stat-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet & Mobile Table Adjustments */
+@media (max-width: 767.98px) {
+  .table-responsive-stack thead {
+    display: none;
+  }
+
+  .table-responsive-stack tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid var(--jt-border);
+    border-radius: var(--radius-md);
+    background: #fff;
+    padding: 0.5rem;
+  }
+
+  .table-responsive-stack td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid var(--jt-border-light);
+    padding: 0.5rem 0.75rem;
+    text-align: right;
+  }
+
+  .table-responsive-stack td:last-child {
+    border-bottom: none;
+  }
+
+  .table-responsive-stack td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--jt-text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    text-align: left;
+    margin-right: 1rem;
+  }
+
+  .login-card {
+    margin: 1rem;
+  }
+}
